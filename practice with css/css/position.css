@@ -1,0 +1,40 @@
+.container{
+    background: blue;
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.content1{
+    height: 10vh;
+    background: red;
+    width: 20%;
+    position: absolute;
+    right: 10px;
+}
+
+.content2{
+    height: 10vh;
+    background: yellow;
+    width: 20%;
+    position: absolute;
+    top: 60px;
+}
+
+.content3{
+    height: 10vh;
+    background: purple;
+    width: 20%;
+    position: absolute;
+    /* left: 40px; */
+    right: 50px;
+}
+
+.content4{
+    height: 10vh;
+    background: brown;
+    width: 20%;
+    position: absolute;
+    right: 300px;
+}

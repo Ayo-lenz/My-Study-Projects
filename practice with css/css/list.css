@@ -1,0 +1,69 @@
+body{
+    background-color: rgb(167, 167, 5);
+}
+
+.container{
+    background-color: azure;
+    padding-top: 50px;
+    width: 60%;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+.content{
+    background-color: blueviolet;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: yellowgreen;
+}
+
+.product{
+    background-color: orange;
+    color: aliceblue;
+    width: 90%;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.project{
+    background-color: orange;
+    color: aliceblue;
+    width: 90%;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ab{
+    color: antiquewhite;
+    list-style-type: circle;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+.ba{
+    color: rgb(149, 247, 162);
+    list-style-type: square;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.ac{
+    color: rgb(243, 199, 141);
+    list-style-type: lower-roman;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+.ca{
+    color: darkred;
+    list-style-type: lower-alpha;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+p{
+    color: rgb(78, 63, 78);
+    font-style: oblique;
+    font-size: large;
+}

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jumia-clone</title>
+    <script src="https://kit.fontawesome.com/fb000b9cbd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./jumia.css">
+  </head>
+  <body>
+    
+    <div class="navigation">
+      <div class="logo">
+        <img src="./images/Jumia.png" alt="">
+      </div>
+
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass lens"></i>
+        <input type="text"  placeholder="Search products, brands and categories">
+        <button>SEARCH</button>
+      </div>
+
+      <div class="account-info">
+        <i class="fa-solid fa-user"></i>
+        <span>Account</span>
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
+
+      <div class="help">
+        <i class="fa-regular fa-circle-question"></i>
+        <span>Help</span>
+        <i class="fa-solid fa-angle-down"></i> 
+      </div>
+
+      <div class="cart">
+        <i class="fa-solid fa-cart-plus"></i>
+        <span>Cart</span>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="container">
+        <div class="side-menu"> 
+
+          <ul>            
+            <li>
+              <a href="">
+                <span id="align"><i class="fa-solid fa-apple-whole fa-flip-horizontal"></i></span>
+                <span>Supermarket</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                <span id="align"><i class="fa-solid fa-flask-vial"></i></span>
+                <span>Health & Beauty</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                <span id="align"><i class="fa-solid fa-house"></i></span>
+                <span> Home & Office</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                <span id="align"><i class="fa-solid fa-kitchen-set"></i></span>
+                <span>Appliances</span>
+              </a>
+            </li>
+              
+            <li>
+              <a href="">
+                <span id="align"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                <span>Phones & Tablets</span>
+              </a>                        
+            </li>
+
+            <li>
+              <a href="">
+                <span id="align"><i class="fa-solid fa-display"></i></span>
+                <span>Computing</span>
+              </a>
+            </li>
+              
+            <li>
+              <a href="">
+                <span id="align"><i class="fa-solid fa-computer"></i></span>
+                <span>Electronics</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                <span id="align"><i class="fa-solid fa-shirt"></i></span>
+                <span>Fashion</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                <span id="align"><i class="fa-brands fa-reddit-alien"></i></span>
+                <span>Baby Products</span>
+              </a>
+                
+            </li>
+              
+            <li>
+              <a href="">
+                <span id="align"><i class="fa-solid fa-gamepad"></i></span>
+                <span>Gaming</span>
+              </a>
+                
+            </li>
+
+            <li>
+              <a href="">
+                <span id="align"><i class="fa-solid fa-dumbbell"></i></span>
+                <span>Sporting Goods</span>
+              </a>
+
+            </li>
+
+            <li>
+              <a href="">
+                <span id="align"><i class="fa-brands fa-slack"></i></span>
+                <span>Other categories</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="main-view"> 
+          <div class="carousel">
+            <section class="slides-row">
+              
+            <div class="slides" id="firstimg"><img src="./images/SX__712x384-detty-december.jpg" alt=""></div>
+
+            <div class="slides"><img src="./images/SX__712x384-gift-ideas.jpg" alt=""></div>
+
+            <div class="slides"><img src="./images/Desktop_Homepage_Slider__712x384.png" alt=""></div>
+
+            <div class="slides"><img src="./images/Choplife-christmas-live-now.gif" alt=""></div>
+
+            <div class="slides"><img src="./images/Desktop-Homepage-Slider_712x384.jpg" alt=""></div>
+
+            <div class="slides" id="lastimg"><img src="./images/Desktop_homepage_slider__712x384_(Shop_Now).jpg" alt=""></div>
+
+            </section>
+
+            <div class="controls">
+              <span class="arrow left"><i class="fa-solid fa-angle-left"></i></span>
+              <span class="arrow right"><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+
+            <section class="dots">
+
+              <div class="dot active"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </section>
+
+            <!-- <section class="indicators">
+              <div class="dot active" attr='0' onclick="switchTest(this)"></div>
+              <div class="dot" attr='1' onclick="switchTest(this)"></div>
+              <div class="dot" attr='2' onclick="switchTest(this)"></div>
+              <div class="dot" attr='3' onclick="switchTest(this)"></div>
+              <div class="dot" attr='4' onclick="switchTest(this)"></div>
+            </section> -->
+
+          </div>
+
+        </div>
+        <div class="right-view">
+          <div class="img1">
+            <img src="./images/bsb side.jpg" alt="">
+          </div>
+          <div class="img1">
+            <img src="./images/JForce side.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!-- categories -->
+
+      <div class="categories">
+        <div class="categories-img">
+          <img src="./images/cat1.gif" alt="">
+          <span>Clearance & Sale</span>
+        </div>
+        <div class="categories-img">
+          <img src="./images/cat2.png" alt="">
+          <span>Clearance & Sale</span>
+        </div>
+        <div class="categories-img">
+          <img src="./images/cat3.jpg" alt="">
+          <span>Clearance & Sale</span>
+        </div>
+        <div class="categories-img">
+          <img src="./images/cat4.jpg" alt="">
+          <span>Clearance & Sale</span>
+        </div>
+        <div class="categories-img">
+          <img src="./images/cat5.gif" alt="">
+          <span>Clearance & Sale</span>
+        </div>
+        <div class="categories-img">
+          <img src="./images/cat6.jpg" alt="">
+          <span>Clearance & Sale</span>
+        </div>
+        <div class="categories-img">
+          <img src="./images/caat7.gif" alt="">
+          <span>Clearance & Sale</span>
+        </div>
+        <div class="categories-img">
+          <img src="./images/cat8.png" alt="">
+          <span>Clearance & Sale</span>
+        </div>
+        <div class="categories-img">
+          <img src="./images/cat9.png" alt="">
+          <span>Clearance & Sale</span>
+        </div>
+        <div class="categories-img">
+          <img src="./images/cat10.gif" alt="">
+          <span>Clearance & Sale</span>
+        </div>
+        <div class="categories-img">
+          <img src="./images/cat11.png" alt="">
+          <span>Clearance & Sale</span>
+        </div>
+        <div class="categories-img">
+          <img src="./images/cat12.gif" alt="">
+          <span>Clearance & Sale</span>
+        </div>
+      </div>
+
+      <!-- flash deals -->
+
+      <div class="flash-deals">
+        <div class="flash-head">
+          <p>Flash Sale Deals</p>
+          <button>SEE ALL <span><i class="fa-solid fa-angle-right"></i></span></button>
+        </div>
+
+        <div class="flash-content">
+
+          <div class="flash-img">
+            <a href="./cart.html">
+              <img src="./images/flash1.jpg" alt="">
+              <p>65 Watts Bluetooth Multi</p>
+              <p id="pbold">&#8358 27,300</p>
+              <span>&#8358 27,540</span>
+            </a>
+          </div>
+
+          <div class="flash-img">
+            <a href="./cart.html">
+              <img src="./images/flash2.jpg" alt="">
+              <p>65 Watts Bluetooth Multi</p>
+              <p id="pbold">&#8358 27,300</p>
+              <span>&#8358 27,540</span>
+            </a>
+          </div>
+
+          <div class="flash-img">
+            <a href="./cart.html">
+              <img src="./images/flash3.jpg" alt="">
+              <p>65 Watts Bluetooth Multi</p>
+              <p id="pbold">&#8358 27,300</p>
+              <span>&#8358 27,540</span>
+            </a>
+          </div>
+
+          <div class="flash-img">
+            <a href="./cart.html">
+              <img src="./images/flash4.jpg" alt="">
+              <p>65 Watts Bluetooth Multi</p>
+              <p id="pbold">&#8358 27,300</p>
+              <span>&#8358 27,540</span>
+            </a>
+          </div>
+
+          <div class="flash-img">
+            <a href="./cart.html">
+              <img src="./images/flash5.jpg" alt="">
+              <p>65 Watts Bluetooth Multi</p>
+              <p id="pbold">&#8358 27,300</p>
+              <span>&#8358 27,540</span>
+            </a>
+          </div>
+
+          <div class="flash-img">
+            <a href="./cart.html">
+              <img src="./images/flaash6.jpg" alt="">
+              <p>65 Watts Bluetooth Multi</p>
+              <p id="pbold">&#8358 27,300</p>
+              <span>&#8358 27,540</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="footer">
+
+      <div class="footer-flex">
+
+        <div class="flex1">
+
+          <a href="">
+            <h1>NEED HELP?</h1>
+          </a>
+
+          <ul>
+            <li><a href="">Chat With Us</a></li>
+
+            <li> <a href="">Help Center</a></li>
+
+            <li> <a href="">Contact Us</a> </li>
+
+            <h1>USEFUL LINKS</h1>
+
+            <li> <a href="">Service Center</a></li>
+
+            <li> <a href="">How to shop on Jumia</a></li>
+
+            <li><a href="">Delievery options and timeless</a></li>
+
+            <li><a href="">How to return a product on Jumia?</a></li>
+
+            <li><a href="">Coperate and bulk purchases</a></li>
+
+            <li><a href="">Report a Product</a></li>
+
+            <li><a href="">Ship your package anywhere in Nigeria</a></li>
+
+            <li><a href="">Dispute Resolution Policy</a></li>
+
+            <li><a href="">Returns and Refund Timeline</a></li>
+
+            <li><a href="">Return Policy</a></li>
+
+            <h2>Join Us</h2>
+          </ul>
+        </div>
+
+        <div class="flex1">
+
+          <a href=""><h1>ABOUT Jumia Global</h1></a>
+
+          <ul>
+
+            <li> <a href="">About us</a></li>
+
+            <li><a href="">Jumia careers</a> </li>
+
+            <li> <a href="">Jumia Express</a></li>
+
+            <li> <a href="">Terms and Conditions</a></li>
+
+            <li><a href="">Privacy Notice</a>D</li>
+
+            <li> <a href="">Jumia Store Credit Terms & Conditios </a></li>
+
+            <li><a href="">Jumia Payment Information Guidelines</a></li>
+
+            <li><a href="">Cookie Notice</a></li>
+
+            <li> <a href="">JumiaGlobal</a></li>
+
+            <li> <a href="">Official Stores</a></li>
+
+            <li> <a href="">Flash Sales</a></li>
+
+            <li> <a href="">Black Friday 2023</a></li>
+
+            <h2>PAYMENT METHODS & DELIVERY</h2>
+          </ul>
+
+        </div>
+
+        <div class="flex1">
+
+          <a href=""><h1>MAKE MONEY WITH JUMIA</h1></a>
+
+          <ul>
+            <li> <a href="">Sell on Jumia</a></li>
+            <li> <a href="">Vendor hub</a></li>
+            <li> <a href="">Become a Sales Consultant</a></li>
+            <li><a href="">Become a Logistics Service Partner</a></li>
+            <li><a href="">Join the Jumia DA Academy</a></li>
+            <li> <a href="">Join the Jumia KOL Program</a></li>
+
+          </ul>
+        </div>
+
+        <div class="flex1">  
+
+          <a href=""><h1>JUMIA INTERNATIONAL</h1></a>
+
+          <ul>
+            <li> <a href="">Algeria</a></li>
+            <li><a href="">Egypt</a></li>
+            <li><a href="">Ghana</a> </li>
+            <li><a href="">Ivory Coast</a></li>
+            <li><a href="">Kenya</a></li>
+          </ul>
+
+          <ul>
+            <li> <a href="">Morocco</a></li>
+            <li><a href="">Senegal</a></li>
+            <li><a href="">Community forums</a> </li>
+            <li><a href="">Tunisia</a></li>
+            <li><a href="">Uganda</a></li>
+            <li> <a href="">Zambia</a></li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+  
+
+  <script src="./jumia.js"></script>
+  </body>
+</html>

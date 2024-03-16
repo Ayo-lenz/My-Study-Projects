@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+      /* here we learn about styliing our application with css */
+      .btn-style{
+        border: none;
+        background-color: black;
+        color: white;
+        padding: 10px 25px;
+        border-radius: 25px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      /* the classList that was added by JS */
+      .is-subscribed{
+        background-color: rgb(240, 224, 224);
+        color: black;
+      }
+
+      /* styling for the shipping calculator */
+      .cost-input{
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      .calculate{
+        font-size: 15px;
+        padding: 12px 15px;
+        background-color: green;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- DOM is another built in object called the documen objecct --> 
+    <!-- dom combine html and javascript together and gives js the full control of the webpage -->
+    <p>Testing with this button</p>
+    <button>hello</button><br>
+    <button onclick="Subscribe()" class="btn btn-style">Subscribe</button>
+    
+
+    <p>Shipping Calculator</p>
+    <input type="text" placeholder="Cost of order" class="calcu cost-input" onkeydown="listenKey()">
+
+    <button onclick="calculator()" class="calculate">Calculate</button>
+
+    <p class="cost-tt"></p>
+
+
+
+
+
+    <script>
+      function Subscribe () {
+        const btnElem = document.querySelector('.btn');
+
+        if (btnElem.innerText === 'Subscribe') {btnElem.innerHTML = 'Subscribed';
+        btnElem.classList.add('is-subscribed');} 
+        else {btnElem.innerHTML = 'Subscribe';
+        btnElem.classList.remove('is-subscribed')}
+        // from what we learn that "innerText and InnerHTML etc," are just JS obejct property so we have another prperty we can use called classList. classList givs us control of the class attribute in HTML
+
+        // Note[the classList that was added here does not need to be specified in the html because we adding the class through the add property of the classList]
+      }
+    //  steps for a shipping calculator when we click the button
+    // get the text in the text box, if amount is <$50, add $10, then display the total on the page...
+
+    function calculator() {
+      const inputNo = document.querySelector('.calcu');
+
+      let cost = Number(inputNo.value);
+
+      if (cost < 50) {cost = cost + 10}
+
+      document.querySelector('.cost-tt').innerHTML = `$${cost}`;
+
+
+    }
+    // .value is used to get a text inputed out from a text box 
+
+    // Number function is a special function in javasript that converts variables into number like we used it above, initially cost variable was a string but we used Number function to convert it to number we ca also convert back to string by using: String()
+
+    // A JavaScript can be executed when an event occurs, like when a user clicks on an HTML element.To execute code when a user clicks on an element, add JavaScript code to an HTML event attribute: e.g (clicks and keydowns)
+
+    // The EventListener method attaches an event handler to an element without overwriting existing event handlers.tthey check for events and run javascript wen those events happen e.g(onclick, onkeydown)
+
+    // every event listener get an event object i e. event.key
+
+    function listenKey() {
+      if (event.key === 'Enter') {
+        calculator();
+      }
+
+    } 
+
+
+
+    </script>
+    <!-- document.querySelector let us get any element from the page and put it inside our javaScript -->
+
+    <!-- the innerText is used to target the text in the html so that our code can work irrespective of spaces i our html  -->
+  </body>
+</html>

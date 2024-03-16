@@ -1,0 +1,184 @@
+*{
+  text-decoration: none;
+  margin: 0;
+}
+
+.container{
+  display: flex;
+}
+
+.nav-bar{
+  background-color: #262629;
+  width: 20%;
+  height: 100vh;
+}
+
+.nav-logo img{
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 100px;
+  height: 40px;
+}
+
+.nav-bar h3{
+  color: green;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+.home-list ul li{
+  margin-left: 10px;
+  margin-bottom: 30px;
+  list-style: none;
+}
+
+.home-list ul li a{
+  display: flex;
+  gap: 15px;
+  color: #fff;
+}
+
+#home{
+  color: green;
+}
+
+.home-list{
+  margin-top: 15px;
+}
+
+/* my main-content */
+.main-content{
+  background-color: #171719;
+  width: 100%;
+}
+
+.profile img{
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+}
+
+.header{
+  display: flex;
+  gap: 600px;
+  align-items: center;
+  height: 8vh;
+
+}
+
+.input{
+  margin-left: 15px;
+  position: relative;
+  
+}
+
+input[type=text]{
+  width: 100%;
+  padding: 8px 60px;
+  border-radius: 10px;
+  background-color: #262629;
+  border: none;
+}
+
+.input span i{
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 20px;
+  color: #ffff;
+}
+
+.profile{
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile span{
+  margin-right: 10px;
+}
+
+#bell{
+  padding: 0px 10px;
+  border-left: 1px solid #fff;
+}
+
+/* overlay css */
+.overlay{
+  position: relative;
+  margin: 20px auto;
+  width: 95%;
+  height: 50vh;
+}
+
+.overlayone{
+  width: 80%;
+  height: 300px;
+  background-image: url(./images/Select\ Image.png);
+  position: absolute;
+  z-index: 555;
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: 108px;
+  border-radius: 10px;
+  color: #fff;
+  /* text-align: center; */
+}
+
+.overlaytwo{
+  width: 90%;
+  height: 250px;
+  background-image: url(./images/Select\ Image\ \(3\).png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 444;
+  left: 55px;
+  top: 20px;
+  border-radius: 10px;
+}
+
+
+.overlaythree{
+  width: 100%;
+  height: 200px;
+  background-image: url(./images/Select\ Image\ \(4\).png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 43px;
+  border-radius: 10px;
+}
+
+.overlayone h4{
+  position: absolute;
+  top: 220px;
+  left: 50px;
+  font-weight: lighter;
+  line-height: 23px;
+}
+
+.overlayone h4 span{
+  margin-right: 10px;
+  background-color: gray;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+/* artist section starts here */
+
+.artist-images{
+  display: flex;
+  gap: 25px;
+}
+
+.artist-images li{
+  list-style: none;
+}
+
+.artist h1{
+  color: #fff;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}

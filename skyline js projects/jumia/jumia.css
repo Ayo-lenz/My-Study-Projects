@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap');
+
+* {
+  font-family: 'Zilla Slab', serif;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+
+/* Styling my navigation bar */
+
+.navigation{
+
+  display: grid;
+  grid-template-columns: 2fr 5fr 1fr 1fr 1.3fr;
+  height: 10vh;
+  background-color: whitesmoke;
+  align-items: center;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+}
+
+.logo{
+  width: 100%;
+  padding-left: 40px;
+}
+
+.logo img{
+  position: absolute;
+  width: 180px;
+  height: 150px;
+  top: -40px;
+}
+
+
+.search-bar{
+  width: 100%;
+  position: relative;
+}
+
+.lens{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.search-bar button{
+
+  background-color: orange;
+  padding: 10px 10px;
+  margin-left: 8px;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+
+}
+
+.account-info span{
+  padding: 0px 5px;
+}
+
+.help span{
+  padding: 0px 5px;
+}
+
+.cart span{
+  padding: 0px 5px;
+}
+
+input[type=text]{
+width: 80%;
+padding: 8px 10px;
+}
+
+input::placeholder{
+    text-indent: 40px;
+    font-size: 17px;
+
+}
+
+/* styling my main-content: side-menu and main-view */
+
+.main-content{
+  /* display: flex; */
+  width: 100%;
+  height: 200vh;
+  background-image: url(./images/istockphoto-925189908-1024x1024.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container{
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 65vh;
+}
+
+/* styline my side-menu */
+
+.side-menu{
+  width: 17%;
+  height: 60vh;
+  background-color: white;
+  border-radius: 5px;
+  /* margin: 20px 0px 0px 100px; */
+  margin-top: 30px;
+}
+
+ul li a i{
+  padding: 5px 7px;
+  font-size: 15px;
+}
+
+ul li{
+    padding: 4px;
+}
+
+ul li a{
+  display: flex;
+  color: black;
+}
+
+#align{
+  width: 33px;
+}
+
+ul li a span{
+  font-size: 13px;
+}
+
+
+/* main view */
+.main-view{
+  display: flex;
+  max-width: 70vw;
+  gap: 10px;
+  /* overflow: hidden; */
+  margin-top: 30px;
+}
+
+.carousel{
+  width: 53vw;
+  height: 60vh;
+  margin: 20px 0px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides-row{
+  height: 100%;
+  display: flex;
+}
+
+.slides{
+  flex-basis: 100%;
+}
+
+.slides img{
+  object-fit: cover;
+  height: 391px;
+  border-radius: 5px;
+}
+
+.controls .arrow{
+  position: absolute;
+  top: 50%;
+  padding: 5px 10px;
+  background-color: gray;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.left{
+  left: 10px;
+}
+
+.right{
+  right: 10px;
+}
+
+.carousel .dots{
+  position: absolute;
+  bottom: 5px;
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel .dots .dot{
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  border: 3px solid #bbb;
+  margin: 0 2px;
+  display: inline-block;
+  transition: background color 0.6s ease;
+} 
+
+.carousel .dots .active{
+  background-color: #333;
+}
+
+.right-view{
+  display: grid;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+@keyframes next1{
+  from{
+    left: 0%;
+  }
+  to{
+    left: -100%;
+  }
+}
+@keyframes next2{
+  from{
+    left: 100%;
+  }
+  to{
+    left: 0%;
+  }
+}
+
+@keyframes prev1{
+  from{
+    left: 0%;
+  }
+  to{
+    left: 100%;
+  }
+}
+@keyframes prev2{
+  from{
+    left: -100%;
+  }
+  to{
+    left: 0%;
+  }
+}
+
+
+/* categories styling */
+.categories{
+  width: 86.5vw;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffff;
+  border-radius: 5px;
+}
+
+.categories-img{
+  width: 100%;
+  height: 30vh;
+  /* border: 3px solid black; */
+}
+
+.categories-img img{
+  width: 100%;
+  height: 25vh;
+}
+
+/* flash sales */
+.flash-deals{
+  width: 86.5vw;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.flash-head{
+  width: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  
+}
+
+.flash-head p{
+  font-size: 22px;
+  color: #fff;
+  font-weight: bolder;
+  padding-left: 25px;
+}
+
+.flash-head button{
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  background-color: red;
+  padding: 0px 25px;
+}
+
+
+.flash-content{
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.flash-img img{
+  width: 100%;
+  height: 30vh;
+}
+
+#pbold{
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.flash-img span{
+  text-decoration: line-through;
+}
+
+.flash-img p, .flash-img span{
+  padding-left: 15px;
+}
+
+.flash-img a{
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* styling my footer section */
+
+.footer{
+    background: rgb(64, 62, 62);
+    color: aliceblue;
+}
+
+.footer-flex{
+    display: flex;
+}
+
+.flex1 ul li a{
+    color: aliceblue;
+}
+
+.flex1  h1, h2{
+    color: aliceblue;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Assignment</title>
+    <style>
+      .food {
+        font-size: 20px;
+        background-color: blueviolet;
+        color: #fff;
+        border-radius: 10px;
+        padding: 10px;
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        background-color: whitesmoke;
+      }
+
+      .container {
+        background-color: green;
+        width: 30%;
+        height: 50%;
+        margin: 80px auto;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="food" id="btn">invest</button>
+
+      <h3 id="ball"></h3>
+      <h3 id="vat-js"></h3>
+      <h3 id="earning"></h3>
+    </div>
+
+    <script>
+      let invest = document.getElementById("btn");
+      let cat = document.getElementById("ball");
+      let interest_html = document.getElementById("vat-js");
+      let earnings = document.getElementById("earning");
+      invest.onclick = () => {
+        let userInvest = prompt("Enter your investment amount");
+        cat.innerHTML = `Investment Amount = N ${userInvest}`;
+        let interest = 0.1 * userInvest + parseInt(userInvest);
+        interest_html.innerHTML = `Investment + Interest = N ${interest}`;
+        let userEarning = 0.02 * interest;
+        let totalUserEarning = interest - userEarning;
+        earnings.innerHTML = `Total Earning = N ${totalUserEarning} `;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+.container{
+    background: red;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.container > div{
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 10%;
+
+}
+
+.container :nth-last-of-type(2){
+    flex-grow: 1;
+}

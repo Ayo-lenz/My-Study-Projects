@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <style>
+
+    .body{
+      font-family: Arial;
+    }
+
+    .todo-css, .todo-input-style{
+      display: grid;
+      grid-template-columns: 200px 150px 100px;
+      column-gap: 10px;
+      row-gap: 10px;
+      align-items: center;
+    }
+
+    .todo-input-style{
+      margin-bottom: 10px;
+      align-items: stretch;
+    }
+
+    .input-style{
+      padding: 6px;
+      font-size: 15px;
+    }
+
+    .todo-add{
+      background-color: green;
+      color: #fff;
+      border: none;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .delete-btn{
+      background-color: darkred;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      font-size: 15px;
+    }
+
+
+  
+  </style>
+</head>
+<body>
+  <!-- an array is another type of value in JS and it represents a list of values --> 
+  <p>Todo List</p>
+  <div class="todo-input-style">
+    <input type="text" placeholder="Todo name" class="js-todo input-style">
+
+    <input type="date" class="js-date input-style">
+    
+    <button  class="todo-add js-add">Add</button>
+  </div>
+
+  <div class="js-todolist todo-css"></div>
+
+  
+
+
+  <script>
+    /*  Another way to loop through an array is using a method of the array called forEach 
+
+    Again we are passing a function into another like setTimeout however this is a little different because we are giving it a parameter
+
+    it loops through the array and for each of the values, it will save in the parameter and run the function,
+
+    the .forEach methos is actually the preferred way to loop through an array because its easier to read than a for loop
+
+    forEach also has another feature, it can have a second parameter which is the position of the value in the array
+
+    forEach loop doesnt have the continue feature that let us skip a iteration in array as of the (for loop ) but we can the same thing with a return statement
+    
+    */
+    
+    [
+      'go home',
+      'go school',
+      'go farm'
+    ].forEach(function(value, index) {
+      if (value === 'go school') {
+        return;
+      }
+      console.log(index);
+      console.log(value);
+    })
+
+
+    // the project js starts here
+    // const todoList is creates as an object inside an array
+    const todoList = [{
+      name: 'church',
+      dueDate: '2023-10-30'
+    },
+    {
+      name: 'school',
+      dueDate: '2023-10-30'
+    }
+    ];
+
+    useTodo();
+
+    function addTodo () {
+      const inputEle = document.querySelector('.js-todo');
+      const name = inputEle.value;
+
+      const dateInput = document.querySelector('.js-date');
+      const dueDate = dateInput.value;
+      todoList.push({name, dueDate});
+  
+      inputEle.value = '';
+      dateInput.value = '';
+
+      useTodo();
+    }
+ 
+    function useTodo () {
+      let todoListHTML = '';
+
+      todoList.forEach(function(todo, index) {
+      const {name, dueDate} = todo;   /*this line is called array destructuring tectnique*/
+      const html = `
+      <div>${name}</div> 
+      <div>${dueDate}</div>
+        <button class="delete-btn js-delete">Delete</button>
+        `;
+      todoListHTML += html;
+      
+      document.querySelector('.js-todolist').innerHTML = todoListHTML;
+      });
+      
+      document.querySelectorAll('.js-delete').forEach((deleteButton, index) => {
+        deleteButton.addEventListener('click', () => {
+          todoList.splice(index, 1);
+        useTodo();
+        })
+      })
+    }
+
+    document.querySelector('.js-add').addEventListener('click', () => {
+      addTodo();
+    });
+
+    /*
+    we want to learn another array method called filter()
+    filter create a new array and save the value in the new array if its true and it false will nt svae
+    
+    it take each value and save it in the parameter and run the function*/
+   console.log([1, 3, -2, 4, -6].filter((value, index) => {
+    /*if (value >= 0) {
+      return true;
+    }else{
+      return false
+    }*/
+    
+    // to shorten the code
+    return value >= 0;
+   }));
+
+  //  map() has same principle as filter and it is used to double the values in an array
+
+  console.log([1, 2, 4, 2].map((value, index) => {
+    // return 8;
+    // return value + 20;
+    return value * 2;
+  }));
+
+  /*another way of writing this code above
+  if we have just one parameter, we can remove d () and also if we have one line of code in our function we can remove the {} and the return statement... i.e: */
+
+  console.log([1, 2, 4, 2].map( value => value * 2));
+
+  /*
+  Closure is a feature of function
+  a closure means if a function has access to a value, it will always have access to that value, the value like index gets packaged together (enclosed) with the functon
+  */
+
+  </script>
+</body>
+</html>
