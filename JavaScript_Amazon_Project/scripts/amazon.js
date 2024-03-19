@@ -1,4 +1,5 @@
-
+import {addToCart, cart} from '../data/cart.js';
+import {products} from '../data/products.js';
 /*
 STEP 2: GENERATE THE HTML
 
@@ -94,29 +95,13 @@ document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
 document.querySelectorAll('.js-add-to-cart').forEach((button) => {
   button.addEventListener('click', () => {
+    // getting the property inside the html data attribute of the add to cart button
     const productId = (button.dataset.productId);
 
-    // checking if the product is in the cart
-    let matchingItem;
-
-    cart.forEach((item) => {
-      if (productId === item.productId) {
-        matchingItem = item;
-      }
-    });
-
-    // increase the quantity by 1 if the product is in the cart if not add it to the cart
-    if (matchingItem) {
-      matchingItem.quantity += 1;
-    } else {
-      cart.push({
-        productId: productId,
-        quantity: 1
-      });
-    } 
+    addToCart(productId);
 
     // to make the cart quantity at the top interactive
-    // step 1: Calculate the qunatity, the total number of products in our cart
+    // step 1: Calculate the quantity, the total number of products in our cart
 
     let cartQuantity = 0
 
