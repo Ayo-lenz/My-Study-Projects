@@ -114,7 +114,7 @@ document.querySelectorAll('.js-delete-link').forEach((link)   => {
 
     // Now we want to update our HTML after removing a product from the cart, now we need to add a special class that will contain the productId to the html
 
-    // we now use the DOM to target the product we want to remove and use the remove() to delete it
+    // we now use the DOM to target the product we want to remove and use the remove() method to delete it
 
     const container = document.querySelector(`.js-cart-item-container-${productId}`);
     
