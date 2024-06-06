@@ -319,6 +319,13 @@
 
 .main-img-container{
     text-align: center;
+    transition: width 2s, height 2s, transform 2s;
+}
+
+.main-img-container:hover {
+  width: 300px;
+  height: 300px;
+  transform: rotate(360deg);
 }
 
 #main-img{
