@@ -95,13 +95,14 @@
     // the project js starts here
     // const todoList is creates as an object inside an array
     const todoList = [{
-      name: 'church',
-      dueDate: '2023-10-30'
+      name: '',
+      dueDate: '',
+      
     },
-    {
-      name: 'school',
-      dueDate: '2023-10-30'
-    }
+    // {
+    //   name: 'school',
+    //   dueDate: '2023-10-30'
+    // }
     ];
 
     useTodo();
@@ -124,7 +125,7 @@
       let todoListHTML = '';
 
       todoList.forEach(function(todo, index) {
-      const {name, dueDate} = todo;   /*this line is called array destructuring technique*/
+      const {name, dueDate,} = todo;   /*this line is called array destructuring technique*/
       const html = `
       <div>${name}</div> 
       <div>${dueDate}</div>
